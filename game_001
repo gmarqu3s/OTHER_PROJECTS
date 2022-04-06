@@ -1,0 +1,36 @@
+#print("""********************************
+#Bem vindo ao Jogo da Adivinhação
+#********************************""")
+bv = "Bem vindo ao Jogo da Adivinhação"
+print(f'{bv:#^20}')
+
+import random
+rand = random.randint(0, 15)
+number_secret = rand
+attemps = 3
+
+#enquanto há tentativas:
+#Posso usar o for ou range para criar esse laço "enquanto"
+#enquanto round for 3
+for round in range(1, attemps + 1):
+    print(f"\nTentativa {round} de {attemps}.")
+    kick_int = str(int(input("Escolha um número de 0 a 15: ")))
+    print (f"""Voce digitou {kick_int}, será que está certo?
+Vamos ver...\n""")
+
+    kick = kick_int
+    right = kick == number_secret
+    larger = kick > number_secret
+    smaller = kick < number_secret
+for kick_int in ():
+    if(kick_int == str):
+        print("Por favor, digite só números")
+    if(right):
+        print(f"Você acertou!! \o/\o/\o/\nNumero secreto: {kick_int}\n")
+    else:
+        if(larger):
+            print(f"Você errou! Seu chute({kick_int}) foi maior que o número secreto :(\nTente novamente!\n")
+        elif(smaller):
+            print(f"Você errou! Seu chute({kick_int}) foi menor que o número secreto :(\nTente novamente!\n")
+    
+print(f"\nO número secreto era: {number_secret}\nFim do Jogo\n")
